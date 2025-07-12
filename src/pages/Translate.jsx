@@ -17,7 +17,7 @@ function Translate() {
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        const res = await fetch("http://localhost:5001/translateByLogin", {
+        const res = await fetch("https://flask-python-template.vercel.app/translateByLogin", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -38,7 +38,7 @@ function Translate() {
         }
       }
       else {
-        const res = await fetch("http://localhost:5001/translate", {
+        const res = await fetch("https://flask-python-template.vercel.app/translate", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
