@@ -15,7 +15,7 @@ function Register() {
         setError('');
         setSuccess('');
         try {
-            const response = await fetch('http://localhost:5001/register', {
+            const response = await fetch('https://flask-python-template.vercel.app/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
