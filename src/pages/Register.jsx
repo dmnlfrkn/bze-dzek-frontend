@@ -24,7 +24,7 @@ function Register() {
             if (response.ok) {
                 setSuccess('Kayıt başarılı. Giriş Yapılıyor');
 
-                const loginresponse = await fetch('http://localhost:5001/login', {
+                const loginresponse = await fetch('https://flask-python-template.vercel.app/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password }),
