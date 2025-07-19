@@ -15,7 +15,7 @@ function Register() {
         setError('');
         setSuccess('');
         try {
-            const response = await fetch('https://flask-python-template.vercel.app/register', {
+            const response = await fetch('https://flask-hello-world-ifgc.onrender.com/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
@@ -24,7 +24,7 @@ function Register() {
             if (response.ok) {
                 setSuccess('Kayıt başarılı. Giriş Yapılıyor');
 
-                const loginresponse = await fetch('https://flask-python-template.vercel.app/login', {
+                const loginresponse = await fetch('https://flask-hello-world-ifgc.onrender.com/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password }),
