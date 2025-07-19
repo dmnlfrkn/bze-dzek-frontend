@@ -15,7 +15,7 @@ function Login() {
         e.preventDefault();
         setError('');
         try {
-            const loginresponse = await fetch('https://flask-python-template.vercel.app/login', {
+            const loginresponse = await fetch('https://flask-hello-world-ifgc.onrender.com/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
