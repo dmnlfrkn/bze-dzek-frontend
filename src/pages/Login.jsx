@@ -37,8 +37,8 @@ function Login() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-start pt-20 px-4">
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Çerkesce Çevirinin Merkezi</h3>
-            <div className="w-full max-w-6xl flex bg-white/10 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 overflow-hidden">
-                <div className="flex-1 text-white p-8 lg:p-20">
+            <div className="w-full max-w-6xl flex flex-col lg:flex-row bg-white/10 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 overflow-hidden">
+                <div className="flex-1 text-white p-6 lg:p-20 order-1 lg:order-1">
                     <h1 className="text-2xl font-semibold mb-6 text-center">
                         Giriş
                     </h1>
@@ -73,7 +73,7 @@ function Login() {
                         </Link>
                     </p>
                 </div>
-                <div className="relative flex-1 p-8 lg:p-20 text-center text-white bg-gradient-to-br from-green-600/20 to-transparent">
+                <div className="relative flex-1 p-6 lg:p-20 text-center text-white bg-gradient-to-br from-green-600/20 to-transparent order-2 lg:order-2">
                     <h1 className="text-3xl font-bold mb-8">Hoş Geldiniz</h1>
                     <p className="text-xl mb-6 text-green-200">Çerkes diline ve kültürüne dijital köprü</p>
                     <div className="space-y-4 text-gray-200 leading-relaxed">
@@ -82,7 +82,7 @@ function Login() {
                         Kelimeleri, cümleleri ya da metinleri girin; saniyeler içinde Türkçesini görün.<br/>
                         Öğrenmenin en kolay yollarından biri artık elinizin altında.
                         </p>
-                        <div className="mt-8 p-4 bg-white/10 rounded-lg border border-white/20">
+                        <div className="mt-6 lg:mt-8 p-4 bg-white/10 rounded-lg border border-white/20">
                             <h3 className="font-semibold mb-2 text-green-300">Giriş Yaparak:</h3>
                             <ul className="text-sm space-y-1 text-left">
                                 <li>• Çeviri geçmişinizi kaydedin</li>

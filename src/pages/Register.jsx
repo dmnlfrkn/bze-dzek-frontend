@@ -48,27 +48,8 @@ function Register() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-start pt-20 px-4">
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Çerkesce Çeviri Ailesine Katılın</h3>
-            <div className="w-full max-w-6xl flex bg-white/10 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 overflow-hidden">
-                <div className="relative flex-1 p-8 lg:p-20 text-center text-white bg-gradient-to-br from-green-600/20 to-transparent">
-                    <h1 className="text-3xl font-bold mb-6">Çerkesçeyi anlamak artık çok kolay!</h1>
-                    <p className="text-xl mb-6 text-green-200">Dilinize sahip çıkmak için ilk adımı atın.</p>
-                    <div className="space-y-4 text-gray-200 leading-relaxed">
-                        <p>
-                        Çerkesçe–Türkçe çeviri platformumuz, dil işleme teknolojileriyle geliştirilmiş bir araçtır. <br/>
-                        Kullanıcılara hızlı ve doğru çeviri sunarak, dil öğrenme sürecini kolaylaştırmayı ve <br/> kültürel içeriklere erişimi artırmayı hedefler.
-                        </p>
-                        <div className="mt-8 p-4 bg-white/10 rounded-lg border border-white/20">
-                            <h3 className="font-semibold mb-2 text-green-300">Platform Özellikleri:</h3>
-                            <ul className="text-sm space-y-1 text-left">
-                                <li>• Yapay zeka destekli çeviri</li>
-                                <li>• Çeviri geçmişi kaydetme</li>
-                                <li>• Klavye kısayolları</li>
-                                <li>• Mobil uyumlu tasarım</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex-1 text-white p-8 lg:p-20">
+            <div className="w-full max-w-6xl flex flex-col lg:flex-row bg-white/10 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 overflow-hidden">
+                <div className="flex-1 text-white p-6 lg:p-20 order-1 lg:order-2">
                     <h2 className="text-2xl font-semibold mb-6 text-center">Kayıt Formu</h2>
                     {error && (
                         <div className="bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm mb-4 text-center">
@@ -113,6 +94,25 @@ function Register() {
                         BZE-DZEK'ın gizlilik uygulamaları hakkında daha fazla bilgi için <Link to="/policy#security" className="text-green-400 hover:text-green-300 hover:underline transition-colors">BZE-DZEK Gizlilik Beyanı</Link>\'na bakın.
                         Size zaman zaman hesabınızla ilgili e-postalar göndereceğiz.
                     </p>
+                </div>
+                <div className="relative flex-1 p-6 lg:p-20 text-center text-white bg-gradient-to-br from-green-600/20 to-transparent order-2 lg:order-1">
+                    <h1 className="text-3xl font-bold mb-6">Çerkesçeyi anlamak artık çok kolay!</h1>
+                    <p className="text-xl mb-6 text-green-200">Dilinize sahip çıkmak için ilk adımı atın.</p>
+                    <div className="space-y-4 text-gray-200 leading-relaxed">
+                        <p>
+                        Çerkesçe–Türkçe çeviri platformumuz, dil işleme teknolojileriyle geliştirilmiş bir araçtır. <br/>
+                        Kullanıcılara hızlı ve doğru çeviri sunarak, dil öğrenme sürecini kolaylaştırmayı ve <br/> kültürel içeriklere erişimi artırmayı hedefler.
+                        </p>
+                        <div className="mt-6 lg:mt-8 p-4 bg-white/10 rounded-lg border border-white/20">
+                            <h3 className="font-semibold mb-2 text-green-300">Platform Özellikleri:</h3>
+                            <ul className="text-sm space-y-1 text-left">
+                                <li>• Yapay zeka destekli çeviri</li>
+                                <li>• Çeviri geçmişi kaydetme</li>
+                                <li>• Klavye kısayolları</li>
+                                <li>• Mobil uyumlu tasarım</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
