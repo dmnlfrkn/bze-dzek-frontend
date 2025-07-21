@@ -2,15 +2,18 @@ import { FaGithub, FaLinkedin, FaInstagram, FaHeart } from "react-icons/fa";
 
 function Footer() {
     return (
-        <footer className="text-white p-6 mt-8 w-full bg-black/95 backdrop-blur-md border-t border-white/10">
+        <footer className="text-white p-6 mt-16 w-full bg-black/95 backdrop-blur-md border-t border-white/10">
             <div className="container mx-auto">
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                     <div>
                         <h3 className="text-green-600 text-lg font-bold mb-3">
                             BZE-DZEK БЗЭЗЭДЗЭКӀ
                         </h3>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed mb-2">
                             Çerkes diline ve kültürüne dijital köprü. Modern teknoloji ile geleneksel dili buluşturan çeviri platformu.
+                        </p>
+                        <p className="text-gray-400 text-sm">
+                            Hasbelkader Çeviri Programı.
                         </p>
                     </div>
                     <div>

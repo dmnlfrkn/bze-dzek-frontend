@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { FaExchangeAlt, FaCopy, FaVolumeUp, FaHistory, FaTimes, FaKeyboard } from 'react-icons/fa'
+import { FaExchangeAlt, FaCopy, FaVolumeUp, FaHistory, FaTimes, FaKeyboard, FaChevronDown } from 'react-icons/fa'
 
 function Translate() {
   const [sourceLang, setSourceLang] = useState('Türkçe');
@@ -12,6 +12,7 @@ function Translate() {
   const [copySuccess, setCopySuccess] = useState('');
   const [charCount, setCharCount] = useState(0);
   const [showShortcuts, setShowShortcuts] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
   
   const inputRef = useRef(null);
   const outputRef = useRef(null);
@@ -30,6 +31,23 @@ function Translate() {
   useEffect(() => {
     localStorage.setItem('translationHistory', JSON.stringify(history));
   }, [history]);
+
+  // Show/hide scroll button based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Show button if not at bottom and there's content below
+      setShowScrollButton(scrollTop + windowHeight < documentHeight - 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Update character count
   useEffect(() => {
@@ -164,8 +182,16 @@ function Translate() {
     setShowHistory(false);
   };
 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start pt-24 p-4">
+    <>
+      <div className="min-h-screen flex flex-col items-center justify-start pt-24 p-4">
       <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-2xl p-6 w-full max-w-6xl border border-white/20">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
@@ -391,7 +417,19 @@ function Translate() {
           </ul>
         </div>
       </div>
-    </div>
+      </div>
+
+      {/* Scroll to bottom button */}
+      {showScrollButton && (
+        <button
+          onClick={scrollToBottom}
+          className="fixed bottom-6 left-6 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 hover:scale-110 z-40"
+          title="Sayfanın altına git"
+        >
+          <FaChevronDown className="text-lg" />
+        </button>
+      )}
+    </>
   );
 }
 
