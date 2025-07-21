@@ -140,7 +140,7 @@ function Translate() {
         ...(token && { Authorization: `Bearer ${token}` }),
       };
 
-      const res = await fetch(`http://127.0.0.1:5001${endpoint}`, {
+      const res = await fetch(`https://dmnlfrkn-bze-dzek-backend.onrender.com${endpoint}`, {
         method: "POST",
         headers,
         body: JSON.stringify({
