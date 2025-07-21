@@ -15,7 +15,7 @@ function Register() {
         setError('');
         setSuccess('');
         try {
-            const response = await fetch('https://flask-hello-world-ifgc.onrender.com/register', {
+            const response = await fetch('https://dmnlfrkn-bze-dzek-backend.onrender.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
