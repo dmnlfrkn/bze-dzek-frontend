@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { FaExchangeAlt, FaCopy, FaVolumeUp, FaHistory, FaClear, FaKeyboard } from 'react-icons/fa'
+import { FaExchangeAlt, FaCopy, FaVolumeUp, FaHistory, FaTimes, FaKeyboard } from 'react-icons/fa'
 
 function Translate() {
   const [sourceLang, setSourceLang] = useState('Türkçe');
@@ -306,7 +306,7 @@ function Translate() {
                   className="p-1 text-gray-400 hover:text-white transition-colors"
                   title="Temizle (Ctrl+L)"
                 >
-                  <FaClear size={14} />
+                  <FaTimes size={14} />
                 </button>
               </div>
             </div>

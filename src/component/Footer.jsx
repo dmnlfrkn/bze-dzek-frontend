@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaHeart } from "react-icons/fa";
 
-
 function Footer() {
     return (
         <footer className="text-white p-6 mt-8 w-full bg-black/95 backdrop-blur-md border-t border-white/10">
