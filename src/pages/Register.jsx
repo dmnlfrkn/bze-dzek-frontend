@@ -46,25 +46,37 @@ function Register() {
     };
 
     return (
-        <div className="min-h-screenflex flex-col items-center justify-start pt-20 ">
-            <div className="w-full flex bg-white/5 backdrop-blur-md rounded-none shadow-2xl">
-                <div className="relative flex-1 p-8 text-center text-white p-20">
-                    <h1 className="text-3xl font-bold mb-4">Çerkesçeyi anlamak artık çok kolay!</h1>
-                    <p className="text-lg mb-4">Dilinize sahip çıkmak için ilk adımı atın.</p>
-                    <p className="text-center text-m mt-4 text-gray-100 leading-[2.2]">
+        <div className="min-h-screen flex flex-col items-center justify-start pt-20 px-4">
+            <h3 className="text-3xl font-bold mb-6 text-center text-white">Çerkesce Çeviri Ailesine Katılın</h3>
+            <div className="w-full max-w-6xl flex bg-white/10 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 overflow-hidden">
+                <div className="relative flex-1 p-8 lg:p-20 text-center text-white bg-gradient-to-br from-green-600/20 to-transparent">
+                    <h1 className="text-3xl font-bold mb-6">Çerkesçeyi anlamak artık çok kolay!</h1>
+                    <p className="text-xl mb-6 text-green-200">Dilinize sahip çıkmak için ilk adımı atın.</p>
+                    <div className="space-y-4 text-gray-200 leading-relaxed">
+                        <p>
                         Çerkesçe–Türkçe çeviri platformumuz, dil işleme teknolojileriyle geliştirilmiş bir araçtır. <br/>
                         Kullanıcılara hızlı ve doğru çeviri sunarak, dil öğrenme sürecini kolaylaştırmayı ve <br/> kültürel içeriklere erişimi artırmayı hedefler.
-                    </p>
+                        </p>
+                        <div className="mt-8 p-4 bg-white/10 rounded-lg border border-white/20">
+                            <h3 className="font-semibold mb-2 text-green-300">Platform Özellikleri:</h3>
+                            <ul className="text-sm space-y-1 text-left">
+                                <li>• Yapay zeka destekli çeviri</li>
+                                <li>• Çeviri geçmişi kaydetme</li>
+                                <li>• Klavye kısayolları</li>
+                                <li>• Mobil uyumlu tasarım</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex-1  text-white p-20">
-                    <h2 className="text-xl font-semibold mb-6 text-center">Kayıt Formu</h2>
+                <div className="flex-1 text-white p-8 lg:p-20">
+                    <h2 className="text-2xl font-semibold mb-6 text-center">Kayıt Formu</h2>
                     {error && (
-                        <div className="bg-red-100 text-red-800 px-3 py-2 rounded-md text-sm mb-4 text-center">
+                        <div className="bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm mb-4 text-center">
                             {error}
                         </div>
                     )}
                     {success && (
-                        <div className="bg-green-100 text-green-800 px-3 py-2 rounded-md text-sm mb-4 text-center">
+                        <div className="bg-green-500/20 border border-green-500/50 text-green-200 px-4 py-3 rounded-lg text-sm mb-4 text-center">
                             {success}
                         </div>
                     )}
@@ -74,31 +86,31 @@ function Register() {
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             placeholder="Kullanıcı Adı"
-                            className="text-white w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 text-sm"
+                            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                         />
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="Şifre"
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 text-sm"
+                            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                         />
                         <button
                             type="submit"
-                            className="w-full bg-green-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors text-sm"
+                            className="w-full bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium"
                         >
                             Kayıt Ol
                         </button>
                     </form>
-                    <p className="text-center text-sm mt-4 text-gray-400">
+                    <p className="text-center text-sm mt-6 text-gray-400">
                         Zaten hesabınız var mı?{' '}
-                        <Link to="/login" className="text-green-600 font-bold hover:underline">
+                        <Link to="/login" className="text-green-400 font-medium hover:text-green-300 hover:underline transition-colors">
                             Giriş Yap
                         </Link>
                     </p>
-                    <p className="text-center text-sm mt-4 text-gray-400" >
-                        Bir hesap oluşturarak <Link to="/policy" className="text-green-600 font-bold hover:underline">Hizmet Şartları</Link>'nı kabul etmiş olursunuz.
-                        BZE-DZEK'ın gizlilik uygulamaları hakkında daha fazla bilgi için <Link to="/policy#security" className="text-green-600 font-bold hover:underline">BZE-DZEK Gizlilik Beyanı</Link>'na bakın.
+                    <p className="text-center text-xs mt-6 text-gray-500 leading-relaxed">
+                        Bir hesap oluşturarak <Link to="/policy" className="text-green-400 hover:text-green-300 hover:underline transition-colors">Hizmet Şartları</Link>'nı kabul etmiş olursunuz.
+                        BZE-DZEK'ın gizlilik uygulamaları hakkında daha fazla bilgi için <Link to="/policy#security" className="text-green-400 hover:text-green-300 hover:underline transition-colors">BZE-DZEK Gizlilik Beyanı</Link>'na bakın.
                         Size zaman zaman hesabınızla ilgili e-postalar göndereceğiz.
                     </p>
                 </div>
