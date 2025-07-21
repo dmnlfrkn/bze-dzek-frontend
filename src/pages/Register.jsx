@@ -110,7 +110,7 @@ function Register() {
                     </p>
                     <p className="text-center text-xs mt-6 text-gray-500 leading-relaxed">
                         Bir hesap oluşturarak <Link to="/policy" className="text-green-400 hover:text-green-300 hover:underline transition-colors">Hizmet Şartları</Link>'nı kabul etmiş olursunuz.
-                        BZE-DZEK'ın gizlilik uygulamaları hakkında daha fazla bilgi için <Link to="/policy#security" className="text-green-400 hover:text-green-300 hover:underline transition-colors">BZE-DZEK Gizlilik Beyanı</Link>'na bakın.
+                        BZE-DZEK'ın gizlilik uygulamaları hakkında daha fazla bilgi için <Link to="/policy#security" className="text-green-400 hover:text-green-300 hover:underline transition-colors">BZE-DZEK Gizlilik Beyanı</Link>\'na bakın.
                         Size zaman zaman hesabınızla ilgili e-postalar göndereceğiz.
                     </p>
                 </div>
