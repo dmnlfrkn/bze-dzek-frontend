@@ -15,7 +15,7 @@ function Login() {
         e.preventDefault();
         setError('');
         try {
-            const loginresponse = await fetch('https://flask-hello-world-ifgc.onrender.com/login', {
+            const loginresponse = await fetch('https://dmnlfrkn-bze-dzek-backend.onrender.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
